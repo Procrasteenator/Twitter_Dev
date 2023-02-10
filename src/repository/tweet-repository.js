@@ -3,8 +3,8 @@ class TweetRepository {
     
     async create(data) {
         try {
-            const tweet = Tweet.create(data);
-            return tweet 
+            const tweet = await Tweet.create(data);
+            return tweet ;
         } catch (error) {
             console.log(error);
         }
