@@ -16,7 +16,10 @@ class TweetRepository  extends CrudRepository {
     
     async getWithComments(tweetId){
         try {
-            const tweet = Tweet.findById(tweetId).populate({path : 'comments'}).lean();
+            const tweet = Tweet.findById(tweetId).populate({path : 'comments' , 
+        populate : {
+            path : 'comments'
+        }}).lean();
             return tweet 
         } catch (error) {
             console.log(error);
