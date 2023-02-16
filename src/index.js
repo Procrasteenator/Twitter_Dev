@@ -13,12 +13,7 @@
     await connect();
     console.log('mongo db connected');
     
-    const UserRepo = new UserRepository();
-    const tweetRepo = new TweetRepository();
-    const tweets = await tweetRepo.getAll(0,10);
-    const users =await UserRepo.getAll();
-    const likeService = new LikeService();
-    likeService.toggleLike(tweets[0].id , 'Tweet' , users[0].id);
+  
 
 
 
