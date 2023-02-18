@@ -10,6 +10,7 @@ export const createTweet = async(req ,res)=>{
             data : response
         })
     } catch (error) {
+        console.log(error);
         return res.status(500).json({
             success : false ,
             message : 'something went wrong' ,
