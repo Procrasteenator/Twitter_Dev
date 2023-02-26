@@ -1,5 +1,6 @@
     import mongoose, { mongo } from "mongoose";
-    
+
+
     const tweetSchema = new mongoose.Schema({
         content  : { 
             type :String , required: true , 
@@ -16,7 +17,13 @@
                 type : mongoose.Schema.Types.ObjectId,
                 ref:'Comment'
             }
-         ]
+         ] ,
+         image : 
+            {
+                type :String
+            }
+         
+
        
     } , {timestamps : true });
 
